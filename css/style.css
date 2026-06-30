@@ -1,0 +1,196 @@
+body {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f5ebe6;
+  color: #3e2c1b;
+  font-size: 18px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/** VIDEO BACKGROUND **/
+.image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== ХЕДЕР С ВИДЕО ===== */
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 72px;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: 35vh; /* меньше высота */
+    min-height: 220px;
+    align-items: center; /* ← вернули центрирование по вертикали */
+    justify-content: center;
+    padding-top: 0; /* убрали отступ сверху */
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ===== */
+@media (max-width: 480px) {
+  .hero {
+    height: 30vh;
+    min-height: 180px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* центрируем блоки по вертикали */
+  padding: 40px 20px;
+}
+main h1 {
+  text-align: center;
+  position: relative;
+  padding-bottom: 12px;
+  display: inline-block;
+}
+main h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #f9d423, #ff4e50);
+  border-radius: 2px;
+}
+/* ===== БЛОК ЦЕНЫ И КНОПКИ ===== */
+.price-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 16px 0 8px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.price-block::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #f9d423, #ff4e50);
+  border-radius: 2px;
+}
+
+.price {
+  font-family: 'Alata', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: #3e2c1b;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-buy {
+  display: inline-block;
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
+  color: #fff;
+  padding: 12px 36px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(249, 212, 35, 0.3);
+}
+
+.btn-buy:hover {
+  opacity: 0.85;
+  box-shadow: 0 6px 16px rgba(249, 212, 35, 0.4);
+}
+
+.pal {
+  color: #009cde; /* голубой */
+}
+
+.btn-buy .pay {
+  color: #0070ba; /* синий */
+}
+
+footer {
+  background-color: #301e0c;
+  color: #eaf5ea;
+  padding: 20px;
+  text-align: center;
+}
