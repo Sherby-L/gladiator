@@ -69,6 +69,35 @@ body {
   margin-top: 6px;
 }
 
+.hero-content h1,
+.hero-content p {
+  opacity: 0;
+  animation: slideLeft 0.8s ease-out 1.8s forwards;
+}
+
+.hero-content p {
+  animation-delay: 1.2s;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+main h1 {
+  opacity: 0;
+  animation: slideLeft 0.8s ease-out 0.2s forwards;
+}
+main p {
+  opacity: 0;
+  animation: slideLeft 0.8s ease-out 0.5s forwards;
+}
 /* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА ===== */
 @media (max-width: 768px) {
   .hero {
