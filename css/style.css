@@ -115,6 +115,9 @@ main p {
   .hero-content p {
     font-size: 14px;
   }
+  .youtube-link {
+    text-align: center;
+  }
 }
 
 /* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ===== */
@@ -167,17 +170,6 @@ main h1::after {
   padding-bottom: 12px;
 }
 
-.price-block::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #f9d423, #ff4e50);
-  border-radius: 2px;
-}
-
 .price {
   font-family: 'Alata', sans-serif;
   font-weight: 700;
@@ -213,21 +205,37 @@ main h1::after {
   box-shadow: 0 6px 16px rgba(249, 212, 35, 0.4);
 }
 
-.pal {
-  color: #009cde; /* голубой */
-}
-
-.btn-buy .pay {
-  color: #0070ba; /* синий */
-}
-
 footer {
   background-color: #301e0c;
-  color: #eaf5ea;
+  color: #f5ebe6;
   padding: 20px;
   text-align: center;
+  font-size: 12px;
 }
 
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-socials a {
+  color: #f5ebe6;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+  display: inline-block;
+  line-height: 0;
+}
+
+.footer-socials a:hover {
+  opacity: 0.6;
+  transform: scale(1.05);
+}
+.rights {
+  padding: 10px;
+}
 @media (min-width: 769px) {
   .btn-buy {
     max-width: 250px; /* или 350px — как хочешь */
