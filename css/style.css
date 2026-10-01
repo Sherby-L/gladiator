@@ -221,7 +221,7 @@ footer {
 }
 
 .footer-socials a {
-  color: #3e2c1b;
+  color: #f5ebe6;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -244,11 +244,11 @@ footer {
 }
 
 .footer-socials a:visited {
-  color: #c4a882;
+  color: #f5ebe6;
 }
 
 .footer-socials a:visited svg {
-  color: #c4a882;
+  color: #f5ebe6;
 }
 .rights {
   padding: 10px;
